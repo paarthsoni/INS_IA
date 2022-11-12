@@ -674,7 +674,7 @@ var swiper = new Swiper(".review-slider", {
 
         <div id="menu-bar" class="fas fa-bars"></div>
 
-        <a href="#" class="logo"><span>Book my show</span></a>
+        <a href="index.php" class="logo"><span>Book my show</span></a>
 
         <nav class="navbar">
             <a href="#Home">Home</a>
