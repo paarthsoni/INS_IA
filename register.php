@@ -391,25 +391,25 @@ button:hover{
 <div class="container">
     <div class="content">
             <h1 class="form-title">Register Here</h1>
-            <form>
-               <input type="text" placeholder="Username">
+            <form action="userregister.php" method="post">
+               <input type="text" placeholder="Username" name="username" required>
             
-                <input type="text" placeholder="Phone Number">
+                <input type="text" placeholder="Phone Number" name="contact" required>
 
-                <select>
-                    <option>Gender</option>
-                    <option>Male</option>
-                    <option>Female</option>
-                    <option>Non-Binary</option>
+                <select name="gender" placeholder="gender">
+                <option value="" disabled selected>Select your Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
                 </select>
 
-                <input type="email" placeholder="Email">
+                <input type="email" placeholder="Email" name="email" required>
                 <div class="beside">
-                <input type="password" placeholder="Password" >
-                <input type="password" placeholder="Confirm Password">
+                <input type="password" placeholder="Password" name="password" required>
+                <input type="password" placeholder="Confirm Password" name="cpassword" required>
                 </div>
                 
-            <button type="button">Submit</button>
+            <button type="submit">Submit</button>
             <p class="message">Already have an account? <a href="login.php">Login</a></p>
             </form>
         </div>

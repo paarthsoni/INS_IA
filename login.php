@@ -401,9 +401,9 @@ header .search-bar-container label:hover{
 <div class="login-page">
   <div class="form">
     <h2>Login to Book My Show</h2>
-    <form class="login-form">
-      <input type="text" placeholder="Username"/>
-      <input type="password" placeholder="Password"/>
+    <form class="login-form" action="userlogin.php" method="post">
+      <input type="text" placeholder="Username" name="username" required/>
+      <input type="password" placeholder="Password" name="password" required/>
       <button>login</button>
       <p class="message">Not registered? <a href="register.php">Create an account</a></p>
     </form>
