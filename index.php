@@ -748,7 +748,7 @@ var swiper = new Swiper(".review-slider", {
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <form action="/action_page.php">
+                    <form action="payment.php">
                         <div class="mb-3 mt-3">
                             <h2 class="p-1">Email</h2>
                             <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
@@ -820,7 +820,7 @@ var swiper = new Swiper(".review-slider", {
                         </button>
                     </div>
                 </div>
-                <div class="swiper-slide">
+                <!-- <div class="swiper-slide">
                     <div class="box">
                         <img class=' rounded'
                             src="https://tse4.mm.bing.net/th?id=OIF.n7LfV%2bsKIvT6KgVhy6Te1g&pid=Api&P=0&w=157&h=233"
@@ -863,7 +863,7 @@ var swiper = new Swiper(".review-slider", {
                             Book Now
                         </button>
                     </div>
-                </div>
+                </div> -->
                 <!-- If we need navigation buttons -->
 
             </div>
