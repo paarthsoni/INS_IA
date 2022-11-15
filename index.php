@@ -119,7 +119,7 @@
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <form action="payment.php">
+                    <form action="payment.php" method="post">
                         <div class="mb-3 mt-3">
                             <h2 class="p-1">Email</h2>
                             <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
@@ -127,17 +127,17 @@
 
                         <div class="mb-3 mt-3">
                             <h2 class="p-1">Name</h2>
-                            <input type="text" class="form-control" placeholder="Enter Name">
+                            <input type="text" class="form-control" placeholder="Enter Name" name="name">
                         </div>
 
                         <div class="mb-3 mt-3">
                             <h3>How many</h3>
-                            <input type="number" class="form-control" placeholder="Number of guests">
+                            <input type="number" class="form-control" placeholder="Number of guests" name="howmany">
                         </div>
 
                         <div class="mb-3 mt-3">
                             <h3>Date</h3>
-                            <input type="date" class="form-control">
+                            <input type="date" class="form-control" name="date">
                         </div>
 
                         <button type="submit" class="btn btn-primary">Submit</button>
