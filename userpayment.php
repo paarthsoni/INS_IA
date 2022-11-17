@@ -12,6 +12,8 @@ if ($conn->connect_error) {
 }
 echo "Connected successfully";
 
+$email_order=$_SESSION['email'];
+
 $cardholdername=$_POST["cardholdername"];
 $cardnumber=$_POST["cardnumber"];
 $expirydate=$_POST["expirydate"];

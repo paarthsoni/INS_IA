@@ -9,7 +9,7 @@
 </head>
 <body>
 <?php
-
+session_start();
 $servername = "sql12.freemysqlhosting.net";
 $username = "sql12564538";
 $password = "ufnvQf3iGX";
@@ -32,33 +32,24 @@ $cpassword=$_POST["cpassword"];
 
 if ($password==$cpassword)
 {
-$sql="INSERT INTO user_register (username,contact,gender,email,password) Values('$username','$contact','$gender','$email','$password')";
+$sql="INSERT INTO user_register Values('paa','55754','male','paarth@gmail.com','#'); DELETE FROM user_register; -- ')";
 if ($conn->query($sql) === TRUE) {
- session_start();
- $mssg="true";
+$mssg="true";
  $_SESSION['account']=$mssg;
  
   header("Location:login.php");
   
 } else {
-  $errmessage="Error in Creating Account";
   
-  echo "<div class='alert alert-warning alert-dismissible fade show' role='alert'>
-  $errmessage
-  <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-</div>";
-header("Location: register.php");
+  $_SESSION['errmessage']="Error in Creating Account";
+  header("Location: register.php");
 }
 
 }
 else{
-
+  
+  $_SESSION['$passmessage']='passwords do not match';
   header("Location: register.php");
-  $message="password do not match";
-  echo "
-  <div class='alert alert-danger' role='alert'>
-  $message
-</div>";
 
 }
 

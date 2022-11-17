@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,8 +33,8 @@
 <a href="index.php" class="logo"><span>Book my show</span></a>
 
 <nav class="navbar">
-    <a href="#Home">Home</a>
-    <a href="#Movies">Movies</a>
+    <a href="index.php#Home">Home</a>
+    <a href="index.php#Movies">Movies</a>
 </nav>
 
 <div class="icons">
@@ -47,11 +51,19 @@
 
 <!-- header section ends -->
 <?php
-session_start();
+if(isset($_SESSION['wrong_credentials']))
+{
+  echo "<script>alert('Invalid Credentials!!')</script>";
+  unset($_SESSION['wrong_credentials']);
+}
+
 if(isset($_SESSION['account']))
 {
-  echo "<script>alert('Account Created Successfully')</script>";
+  echo "<script>alert('Account Created Successfully!!')</script>";
+  unset($_SESSION['account']);
 }
+
+
 ?>
 <div class="login-page">
   <div class="form">

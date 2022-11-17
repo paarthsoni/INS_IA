@@ -153,6 +153,8 @@ body{
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
 
 <?php
+  session_start();
+  $_SESSION['email']=$_POST["email"];
   $email=$_POST["email"];
   $name=$_POST["name"];
   $howmany=$_POST["howmany"];

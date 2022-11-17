@@ -46,7 +46,7 @@
             if (isset($_SESSION['username']))
             {
               $user=$_SESSION['username'];
-              
+             
               echo "<a style='color:white; text-decoration:none;' href='logout.php'>Hello,$user</a>";
             }
             else{

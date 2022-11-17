@@ -15,22 +15,25 @@ echo "Connected successfully";
 $username=$_POST["username"];
 $password=$_POST["password"];
 
-$sql="Select username, password from user_register where username='$username' and password='$password' ";
+$sql="Select * from user_register where username='$username' and password='$password' ";
 
 $result = mysqli_query($conn, $sql);
 
 $rows=mysqli_num_rows($result);
-
-if ($rows==1)
+echo "$rows";
+if ($rows>=1)
   {
       session_start();
       $_SESSION["username"]=$username;
-      echo "$rows";
       header("Location: index.php");
   }
 
   else{
-    
+    session_start();
+    $_SESSION['wrong_credentials']="invalid credentials";
+    header('Location:login.php');
+   
+   
   }
 
 ?>
