@@ -155,10 +155,9 @@ body{
 <?php
   session_start();
   $_SESSION['email']=$_POST["email"];
-  $email=$_POST["email"];
-  $name=$_POST["name"];
-  $howmany=$_POST["howmany"];
-  $date=$_POST["date"];
+  $_SESSION['name']=$_POST["name"];
+  $_SESSION['howmany']=$_POST["howmany"];
+  $_SESSION['date']=$_POST["date"];
 ?>
 
 <div class="wrapper">

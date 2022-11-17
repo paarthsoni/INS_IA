@@ -12,7 +12,12 @@ if ($conn->connect_error) {
 }
 echo "Connected successfully";
 
-$email_order=$_SESSION['email'];
+session_start();
+
+$email=$_SESSION['email'];
+$name=$_SESSION['name'];
+$howmany=$_SESSION['howmany'];
+$date=$_SESSION['date'];
 
 $cardholdername=$_POST["cardholdername"];
 $cardnumber=$_POST["cardnumber"];
@@ -22,4 +27,8 @@ $cvc=$_POST["cvc"];
 $sql="INSERT INTO user_payment (cardholder_name,card_number,expiry_date,cvc) Values('$cardholdername','$cardnumber','$expirydate','$cvc')";
 
 $conn->query($sql);
+
+$sql1="INSERT INTO book_now (email,name,howmany,date) Values('$email','$name','$howmany','$date')";
+
+$conn->query($sql1);
 ?>
