@@ -154,10 +154,10 @@ body{
 
 <?php
   session_start();
-  $_SESSION['email']=$_POST["email"];
-  $_SESSION['name']=$_POST["name"];
-  $_SESSION['howmany']=$_POST["howmany"];
-  $_SESSION['date']=$_POST["date"];
+  $_SESSION['email']=$_GET["email"];
+  $_SESSION['name']=$_GET["name"];
+  $_SESSION['howmany']=$_GET["howmany"];
+  $_SESSION['date']=$_GET["date"];
 
   
 
