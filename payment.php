@@ -24,7 +24,7 @@ body{
 
 .payment{
   background: #f8f8f8;
-  max-width: 360px;
+  max-width: 500px;
   margin: 80px auto;
   height: auto;
   padding: 35px;
@@ -158,10 +158,18 @@ body{
   $_SESSION['name']=$_POST["name"];
   $_SESSION['howmany']=$_POST["howmany"];
   $_SESSION['date']=$_POST["date"];
+
+  
+
 ?>
 
 <div class="wrapper">
   <div class="payment">
+    Customer Name:  <?php  echo  $_SESSION['name'];?><br><br>
+    Customer Email: <?php echo  $_SESSION['email'];?><br><br>
+    Total Tickets: <?php  echo $_SESSION['howmany'];?><br><br>
+    Date: <?php  echo $_SESSION['date'];?><br><br>
+
     <div class="payment-logo">
       <p>p</p>
     </div>

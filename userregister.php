@@ -32,7 +32,8 @@ $cpassword=$_POST["cpassword"];
 
 if ($password==$cpassword)
 {
-$sql="INSERT INTO user_register Values('$username','$contact','$gender','$email','$password')";
+$sql="INSERT INTO user_register (contact,gender,email,password,username) Values('$contact','$gender','$email','$password','$username')";
+
 if ($conn->query($sql) === TRUE) {
 $mssg="true";
  $_SESSION['account']=$mssg;

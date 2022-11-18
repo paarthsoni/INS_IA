@@ -66,6 +66,14 @@
 
     <!-- header section ends -->
 
+    <?php
+    if(isset($_SESSION['booked']))
+    {
+        echo "<script>alert('Ticket Booked Successfully')</script>";
+        unset($_SESSION['booked']);
+    }
+
+    ?>
 
 
 
@@ -119,7 +127,7 @@
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <form action="payment.php" method="post">
+                    <form action="payment.php" method="get">
                         <div class="mb-3 mt-3">
                             <h2 class="p-1">Email</h2>
                             <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
