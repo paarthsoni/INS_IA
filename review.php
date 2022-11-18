@@ -52,6 +52,15 @@ session_start();
 
 <!-- header section ends -->
 <?php
+ if (isset($_SESSION['username']))
+ {
+   $user=$_SESSION['username'];
+  
+   echo "<a style='color:white; text-decoration:none;' href='logout.php'>Hello,$user</a>";
+ }
+ else{
+   echo "<a class='fas fa-user' id='login-btn' href='login.php'></a>";
+ }
 if(isset($_SESSION['wrong_credentials']))
 {
   echo "<script>alert('Invalid Credentials!!')</script>";
