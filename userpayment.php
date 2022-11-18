@@ -31,7 +31,4 @@ $conn->query($sql);
 $sql1="INSERT INTO book_now (email,name,howmany,date) Values('$email','$name','$howmany','$date')";
 
 $conn->query($sql1);
-
-$_SESSION['booked']="booked";
-header('Location: index.php');
 ?>

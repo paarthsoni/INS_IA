@@ -66,14 +66,6 @@
 
     <!-- header section ends -->
 
-    <?php
-    if(isset($_SESSION['booked']))
-    {
-        echo "<script>alert('Ticket Booked Successfully')</script>";
-        unset($_SESSION['booked']);
-    }
-
-    ?>
 
 
 
@@ -84,19 +76,19 @@
     <div id="control" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner bg-light">
             <div class="carousel-item active ">
-                <img class="d-block w-75 mx-auto"
-                    src="https://streamingdue.com/wp-content/uploads/2022/03/Mahesh-Babu.jpg" alt="">
+                <img class="d-block w-65 mx-auto"
+                    src="https://i.ytimg.com/vi/cxA2y9Tgl7o/maxresdefault.jpg" alt="">
             </div>
             <div class="carousel-item ">
-                <img class="d-block w-75 mx-auto" src="https://i.ytimg.com/vi/q_Wwn7jHufc/maxresdefault.jpg" alt="">
+                <img class="d-block w-65 mx-auto" src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/E9C42FC150931CED05EFA1EAE4FE82141414FF93C4867DFEB9F075BCDA9559E6/scale?width=1200&aspectRatio=1.78&format=jpeg" alt="">
             </div>
             <div class="carousel-item ">
-                <img class="d-block w-75 mx-auto"
-                    src="https://maxblizz.com/wp-content/uploads/2022/02/strang-4k-1-scaled-e1645329727286.jpg" alt="">
+                <img class="d-block w-65 mx-auto"
+                    src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/202210/varun-dhawan-turn-werewolf-look-for-bhediya-sixteen_nine.jpg" alt="">
             </div>
             <div class="carousel-item ">
-                <img class="d-block w-75 mx-auto"
-                    src="https://img.onmanorama.com/content/dam/mm/en/entertainment/movie-reviews/images/2022/4/12/kgf.jpg.transform/schema-16x9/image.jpg"
+                <img class="d-block w-65 mx-auto"
+                    src="https://gumlet.assettype.com/rajexpress%2F2022-08%2F0897e8b9-08f0-43dc-a00d-5bc66ed491f7%2Fuunchai.jpg?rect=0%2C0%2C1600%2C900&auto=format%2Ccompress&fit=max&format=webp&w=400&dpr=2.6"
                     alt="">
             </div>
         </div>
@@ -127,7 +119,7 @@
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <form action="payment.php" method="get">
+                    <form action="payment.php" method="post">
                         <div class="mb-3 mt-3">
                             <h2 class="p-1">Email</h2>
                             <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
@@ -192,7 +184,7 @@
                         <h3>Sarkar Vaari Paata </h3></br></br>
 
                         <div class="stars">
-                           <a href="review.php" style="text-decoration: none; color: orange;"> <i class="fas fa-star"></i>6.6/10</a>
+                            <i class="fas fa-star"></i>6.6/10
                         </div>
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
                             Book Now

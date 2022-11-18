@@ -313,6 +313,9 @@ header .search-bar-container label:hover {
 .home .controls .vid-btn.active {
     background: var(--orange);
 }
+.img v-65{
+    height: 40%;
+}
 
 .Book .row {
     display: flex;
