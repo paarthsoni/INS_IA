@@ -64,12 +64,17 @@ if(isset($_SESSION['account']))
   unset($_SESSION['account']);
 }
 
+if($_SESSION['review'])
+{
+    echo "<script>alert('Reviewed Successfully!!')</script>";
+    unset($_SESSION['review']);
+}
 
 ?>
 <div class="login-page">
   <div class="form">
     <h2>Give Your Review</h2>
-    <form class="login-form" action="userlogin.php" method="post">
+    <form class="login-form" action="userreview.php" method="post">
       <input type="text" placeholder="Name" name="name" required/>
       <input type="text" placeholder="Review" name="review" required/>
       <button>Submit</button>
@@ -80,35 +85,36 @@ if(isset($_SESSION['account']))
 <div class="table-title">
 <h3>Review Table</h3>
 </div>
-<table class="table-fill">
-<thead>
-<tr>
-<th class="text-left">Name</th>
-<th class="text-left">Review</th>
-</tr>
-</thead>
-<tbody class="table-hover">
-<tr>
-<td class="text-left">January</td>
-<td class="text-left">$ 50,000.00</td>
-</tr>
-<tr>
-<td class="text-left">February</td>
-<td class="text-left">$ 10,000.00</td>
-</tr>
-<tr>
-<td class="text-left">March</td>
-<td class="text-left">$ 85,000.00</td>
-</tr>
-<tr>
-<td class="text-left">April</td>
-<td class="text-left">$ 56,000.00</td>
-</tr>
-<tr>
-<td class="text-left">May</td>
-<td class="text-left">$ 98,000.00</td>
-</tr>
-</tbody>
-</table>
+<?php
+
+$servername = "sql12.freemysqlhosting.net";
+$username = "sql12564538";
+$password = "ufnvQf3iGX";
+$dbname="sql12564538";
+
+$conn = new mysqli($servername, $username, $password,$dbname);
+
+
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT * FROM user_review";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  echo "<table class='table-fill'> <tr><th class='text-left'>Name</th><th class='text-left'>Review</th></tr>";
+  
+  while($row = $result->fetch_assoc()) {
+    echo "<tr><td class='text-left'>".$row["name"]."</td><td class='text-left'>".$row["review"]."</td></tr>";
+  }
+  echo "</table>";
+} else {
+    echo "<table class='table-fill'> <tr><th class='text-left'>Name</th><th class='text-left'>Review</th></tr>";
+  
+}
+$conn->close();
+?>
+
 </body>
 </html>
