@@ -192,7 +192,7 @@
                         <h3>Sarkar Vaari Paata </h3></br></br>
 
                         <div class="stars">
-                            <i class="fas fa-star"></i>6.6/10
+                           <a href="review.php" style="text-decoration: none; color: orange;"> <i class="fas fa-star"></i>6.6/10</a>
                         </div>
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
                             Book Now
