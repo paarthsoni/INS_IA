@@ -14,7 +14,7 @@
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="CSSfrontend.css">
-    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="./css/register.css">
 
    
 </head>

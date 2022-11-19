@@ -26,9 +26,18 @@ $cvc=$_POST["cvc"];
 
 $sql="INSERT INTO user_payment (cardholder_name,card_number,expiry_date,cvc) Values('$cardholdername','$cardnumber','$expirydate','$cvc')";
 
-$conn->query($sql);
+
 
 $sql1="INSERT INTO book_now (email,name,howmany,date) Values('$email','$name','$howmany','$date')";
 
-$conn->query($sql1);
+
+
+if ($conn->query($sql)===TRUE && $conn->query($sql1))
+{
+  $_SESSION['ticket_booked']='ticket_booked';
+  header('Location: index.php');
+}
+else{
+  echo "error in booking the ticket";
+}
 ?>

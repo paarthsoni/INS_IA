@@ -17,9 +17,9 @@ session_start();
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="CSSfrontend.css">
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="review.css">
-    <script src="login.js"></script>
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/review.css">
+    <script src="./js/login.js"></script>
    
 
 
@@ -40,7 +40,19 @@ session_start();
 
 <div class="icons">
     <i class="fas fa-search" id="search-btn"></i>
-    <a class="fas fa-user" id="login-btn" href="login.php"></a>
+    <?php
+           
+      if (isset($_SESSION['username']))
+        {
+          $user=$_SESSION['username'];
+             
+          echo "<a style='color:white; text-decoration:none;' href='logout.php'>Hello,$user</a>";
+        }
+    else{
+          echo "<a class='fas fa-user' id='login-btn' href='login.php'></a>";
+        }
+    ?>
+    
 </div>
 
 <form action="" class="search-bar-container">
@@ -52,27 +64,7 @@ session_start();
 
 <!-- header section ends -->
 <?php
- if (isset($_SESSION['username']))
- {
-   $user=$_SESSION['username'];
-  
-   echo "<a style='color:white; text-decoration:none;' href='logout.php'>Hello,$user</a>";
- }
- else{
-   echo "<a class='fas fa-user' id='login-btn' href='login.php'></a>";
- }
-if(isset($_SESSION['wrong_credentials']))
-{
-  echo "<script>alert('Invalid Credentials!!')</script>";
-  unset($_SESSION['wrong_credentials']);
-}
-
-if(isset($_SESSION['account']))
-{
-  echo "<script>alert('Account Created Successfully!!')</script>";
-  unset($_SESSION['account']);
-}
-
+ 
 if($_SESSION['review'])
 {
     echo "<script>alert('Reviewed Successfully!!')</script>";
